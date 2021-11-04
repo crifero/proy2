@@ -1,0 +1,12 @@
+
+<ul *ngIf="show"  class="list-group">
+    <li *ngFor= "let post of posts" class="list-group-item disabled" aria-disabled="true">{{post.userId}}
+        <span>{{post.id}}</span>
+    <span>{{post.title}}</span>
+    <span>{{post.body}}</span>
+    </li>
+    
+  </ul>
+  <button (click)="mostrarlista()">
+    {{show?'ocultar': 'mostrar'}}
+      </button>

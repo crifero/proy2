@@ -1,0 +1,12 @@
+<ul *ngIf="show"   class="list-group">
+    <li *ngFor= "let user of users" class="list-group-item disabled" aria-disabled="true">{{user.id}}
+        <span>{{user.name}}</span>
+    <span>{{user.email}}</span>
+    <span>{{user.username}}</span>
+    <img [src]="imglogo" alt= "" class="logoA">
+    </li>
+   
+  </ul>
+  <button (click)="show=!show">
+    {{show?'ocultar': 'mostrar'}}
+      </button>
